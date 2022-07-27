@@ -11,6 +11,7 @@
 <style>
     html,body{
         background-image: url("https://c.tenor.com/AJBv6U1rfkQAAAAC/background-image-gala");
+
     }
     .demoP { 
         margin-top: 10rem;
@@ -36,12 +37,12 @@
 <p id="demo"></p>
 </div>
 <div>
-    <p class="message">Until your sweet birthday</p>
-    <p class="message">I love you to the furthest star and back♥</p>
+    <p class="message">I love you to the furthest star and back</p>
 </div>
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Aug 10,"+new Date().getFullYear()+" 00:00:00").getTime();
+var year = new Date().getFullYear();
+var countDownDate = new Date("Aug 10," +year.toString()+" 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -60,13 +61,14 @@ var x = setInterval(function() {
 
   // Display the result in the element with id="demo"
   document.getElementById("demo").innerHTML = days + ":" + hours + ":"
-  + minutes + ":" + seconds ;
+  + minutes + ":" + seconds + "<br>Until your sweet birthday";
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = "IT'S YOUR BIRTHDAY";
   }
 }, 1000);
+
 </script></body>
 </html>
